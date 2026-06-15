@@ -140,6 +140,7 @@ class Solution:
 | Day 8 | 27 | Remove Element | 🟢 Easy | [🔗 View](https://leetcode.com/problems/remove-element/) |
 | Day 9 | 28 | Find the Index of the First Occurrence in a String | 🟢 Easy | [🔗 View](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) |
 | Day 10 | 35 | Search Insert Position | 🟢 Easy | [🔗 View](https://leetcode.com/problems/search-insert-position/) |
+| Day 11 | 58 | Length of Last Word | 🟢 Easy | [🔗 View](https://leetcode.com/problems/length-of-last-word/) |
 
 ---
 
@@ -147,10 +148,10 @@ class Solution:
 
 | Difficulty | Problems Solved |
 |------------|----------------|
-|  Easy | 10 |
+|  Easy | 11|
 |  Medium | 0 |
 |  Hard | 0 |
-| **TOTAL** | **10** |
+| **TOTAL** | **11** |
 
 ---
 
