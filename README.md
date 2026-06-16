@@ -141,6 +141,7 @@ class Solution:
 | Day 9 | 28 | Find the Index of the First Occurrence in a String | 🟢 Easy | [🔗 View](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) |
 | Day 10 | 35 | Search Insert Position | 🟢 Easy | [🔗 View](https://leetcode.com/problems/search-insert-position/) |
 | Day 11 | 58 | Length of Last Word | 🟢 Easy | [🔗 View](https://leetcode.com/problems/length-of-last-word/) |
+| Day 12 | 66 | Plus One | 🟢 Easy | [🔗 View](https://leetcode.com/problems/plus-one/) |
 
 ---
 
@@ -148,10 +149,10 @@ class Solution:
 
 | Difficulty | Problems Solved |
 |------------|----------------|
-|  Easy | 11|
+|  Easy | 12|
 |  Medium | 0 |
 |  Hard | 0 |
-| **TOTAL** | **11** |
+| **TOTAL** | **12** |
 
 ---
 
