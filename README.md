@@ -144,6 +144,9 @@ class Solution:
 | Day 12 | 66 | Plus One | 🟢 Easy | [🔗 View](https://leetcode.com/problems/plus-one/) |
 | Day 13 | 67 | Add Binary | 🟢 Easy | [🔗 View](https://leetcode.com/problems/add-binary/) |
 | Day 14 | 189 | Rotate Array | 🟡 Medium | [🔗 View](https://leetcode.com/problems/rotate-array/) |
+| Day 15 | 53 | Maximum Subarray | 🟡 Medium | [🔗 View](https://leetcode.com/problems/maximum-subarray/) |
+
+
 ---
 
 ## Progress Tracker
@@ -151,9 +154,9 @@ class Solution:
 | Difficulty | Problems Solved |
 |------------|----------------|
 |  Easy | 13 |
-|  Medium | 1 |
+|  Medium | 2 |
 |  Hard | 0 |
-| **TOTAL** | **14** |
+| **TOTAL** | **15** |
 
 ---
 
