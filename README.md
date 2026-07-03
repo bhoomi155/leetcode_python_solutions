@@ -147,6 +147,7 @@ class Solution:
 | Day 15 | 53 | Maximum Subarray | 🟡 Medium | [🔗 View](https://leetcode.com/problems/maximum-subarray/) |
 | Day 16 | 152 | Maximum Product Subarray | 🟡 Medium | [🔗 View](https://leetcode.com/problems/maximum-product-subarray/) |
 | Day 17 | 2016 | Maximum Difference Between Increase Elements | 🟢 Easy | [🔗 View](https://leetcode.com/problems/maximum-difference-between-increasing-elements/) |
+| Day 18 | 41 | First Missing Positive | 🔴 Hard  | [🔗 View](https://leetcode.com/problems/first-missing-positive/) |
 
 
 ---
