@@ -1,0 +1,125 @@
+# LeetCode 41 - First Missing Positive
+
+## Problem
+
+Given an unsorted integer array `nums`, return the smallest positive integer that is not present in the array.
+
+You must implement an algorithm that runs in **O(n)** time and uses **O(1)** auxiliary space.
+
+---
+
+## Approach (Cyclic Sort)
+
+Since the answer must be in the range `[1, n + 1]`, where `n` is the length of the array:
+
+- Place each positive number `x` at index `x - 1`.
+- Ignore numbers that are:
+  - Negative
+  - Zero
+  - Greater than `n`
+- After rearrangement, the first index `i` where `nums[i] != i + 1` gives the missing positive number.
+- If all positions are correct, return `n + 1`.
+
+---
+
+## Python Solution
+
+```python
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        i = 0
+        n = len(nums)
+
+        while i < n:
+            if 1 <= nums[i] <= n and nums[nums[i] - 1] != nums[i]:
+                nums[nums[i] - 1], nums[i] = nums[i], nums[nums[i] - 1]
+            else:
+                i += 1
+
+        for i in range(n):
+            if nums[i] != i + 1:
+                return i + 1
+
+        return n + 1
+```
+
+---
+
+## Example 1
+
+### Input
+
+```python
+nums = [1, 2, 0]
+```
+
+### Rearranged Array
+
+```python
+[1, 2, 0]
+```
+
+### Output
+
+```python
+3
+```
+
+---
+
+## Example 2
+
+### Input
+
+```python
+nums = [3, 4, -1, 1]
+```
+
+### Rearranged Array
+
+```python
+[1, -1, 3, 4]
+```
+
+### Output
+
+```python
+2
+```
+
+---
+
+## Example 3
+
+### Input
+
+```python
+nums = [7, 8, 9, 11, 12]
+```
+
+### Output
+
+```python
+1
+```
+
+---
+
+## Complexity Analysis
+
+| Complexity | Value |
+|------------|--------|
+| Time | O(n) |
+| Space | O(1) |
+
+---
+
+## Key Insight
+
+For an array of length `n`, the first missing positive integer must lie within the range:
+
+```text
+[1, n + 1]
+```
+
+By placing every valid number `x` at index `x - 1`, we can identify the first missing positive number in a single traversal without using extra space.
