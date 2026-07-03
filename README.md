@@ -146,6 +146,7 @@ class Solution:
 | Day 14 | 189 | Rotate Array | 🟡 Medium | [🔗 View](https://leetcode.com/problems/rotate-array/) |
 | Day 15 | 53 | Maximum Subarray | 🟡 Medium | [🔗 View](https://leetcode.com/problems/maximum-subarray/) |
 | Day 16 | 152 | Maximum Product Subarray | 🟡 Medium | [🔗 View](https://leetcode.com/problems/maximum-product-subarray/) |
+| Day 17 | 2016 | Maximum Difference Between Increase Elements | 🟢 Easy | [🔗 View](https://leetcode.com/problems/maximum-difference-between-increasing-elements/) |
 
 
 ---
@@ -154,10 +155,10 @@ class Solution:
 
 | Difficulty | Problems Solved |
 |------------|----------------|
-|  Easy | 13 |
+|  Easy | 14 |
 |  Medium | 3 |
 |  Hard | 0 |
-| **TOTAL** | **16** |
+| **TOTAL** | **17** |
 
 ---
 
