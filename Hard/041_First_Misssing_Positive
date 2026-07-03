@@ -1,6 +1,6 @@
 # LeetCode 41 - First Missing Positive
 
-## Problem
+## Problem 
 
 Given an unsorted integer array `nums`, return the smallest positive integer that is not present in the array.
 
