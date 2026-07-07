@@ -1,24 +1,40 @@
-# LeetCode 41 - First Missing Positive
+# 4. Median of Two Sorted Arrays
 
-## Problem 
+## Problem
 
-Given an unsorted integer array `nums`, return the smallest positive integer that is not present in the array.
+Given two sorted arrays `nums1` and `nums2` of sizes `m` and `n` respectively, return the median of the two sorted arrays.
 
-You must implement an algorithm that runs in **O(n)** time and uses **O(1)** auxiliary space.
+The overall run time complexity should be **O(log(m+n))**.
+
+### Example 1
+
+```text
+Input: nums1 = [1,3], nums2 = [2]
+Output: 2.00000
+
+Merged Array: [1,2,3]
+Median = 2
+```
+
+### Example 2
+
+```text
+Input: nums1 = [1,2], nums2 = [3,4]
+Output: 2.50000
+
+Merged Array: [1,2,3,4]
+Median = (2 + 3) / 2 = 2.5
+```
 
 ---
 
-## Approach (Cyclic Sort)
+## Approach (Simple Merge + Sort)
 
-Since the answer must be in the range `[1, n + 1]`, where `n` is the length of the array:
-
-- Place each positive number `x` at index `x - 1`.
-- Ignore numbers that are:
-  - Negative
-  - Zero
-  - Greater than `n`
-- After rearrangement, the first index `i` where `nums[i] != i + 1` gives the missing positive number.
-- If all positions are correct, return `n + 1`.
+1. Combine both arrays.
+2. Sort the combined array.
+3. Find the middle element(s).
+4. If the length is odd, return the middle element.
+5. If the length is even, return the average of the two middle elements.
 
 ---
 
@@ -26,100 +42,72 @@ Since the answer must be in the range `[1, n + 1]`, where `n` is the length of t
 
 ```python
 class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
-        i = 0
-        n = len(nums)
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        res = nums1 + nums2
+        res.sort()
 
-        while i < n:
-            if 1 <= nums[i] <= n and nums[nums[i] - 1] != nums[i]:
-                nums[nums[i] - 1], nums[i] = nums[i], nums[nums[i] - 1]
-            else:
-                i += 1
+        n = len(res)
 
-        for i in range(n):
-            if nums[i] != i + 1:
-                return i + 1
-
-        return n + 1
+        if n % 2 == 0:
+            return (res[n // 2 - 1] + res[n // 2]) / 2
+        else:
+            return res[n // 2]
 ```
 
 ---
 
-## Example 1
+## Dry Run
 
 ### Input
 
 ```python
-nums = [1, 2, 0]
+nums1 = [1, 2]
+nums2 = [3, 4]
 ```
 
-### Rearranged Array
+### Step 1: Merge
 
 ```python
-[1, 2, 0]
+res = [1, 2, 3, 4]
+```
+
+### Step 2: Sort
+
+```python
+res = [1, 2, 3, 4]
+```
+
+### Step 3: Find Median
+
+```python
+n = 4
+Median = (res[1] + res[2]) / 2
+       = (2 + 3) / 2
+       = 2.5
 ```
 
 ### Output
 
 ```python
-3
-```
-
----
-
-## Example 2
-
-### Input
-
-```python
-nums = [3, 4, -1, 1]
-```
-
-### Rearranged Array
-
-```python
-[1, -1, 3, 4]
-```
-
-### Output
-
-```python
-2
-```
-
----
-
-## Example 3
-
-### Input
-
-```python
-nums = [7, 8, 9, 11, 12]
-```
-
-### Output
-
-```python
-1
+2.5
 ```
 
 ---
 
 ## Complexity Analysis
 
-| Complexity | Value |
-|------------|--------|
-| Time | O(n) |
-| Space | O(1) |
+- Time Complexity: `O((m+n) log(m+n))`
+  - Sorting dominates the runtime.
+- Space Complexity: `O(m+n)`
+  - Extra array used to store merged elements.
 
 ---
 
-## Key Insight
+## Note
 
-For an array of length `n`, the first missing positive integer must lie within the range:
+This solution passes LeetCode but **does not satisfy the required `O(log(m+n))` complexity** mentioned in the problem statement.
 
-```text
-[1, n + 1]
-```
+The optimal solution uses **Binary Search on partitions** and achieves:
 
-By placing every valid number `x` at index `x - 1`, we can identify the first missing positive number in a single traversal without using extra space.
+- Time Complexity: `O(log(min(m, n)))`
+- Space Complexity: `O(1)`
