@@ -149,6 +149,7 @@ class Solution:
 | Day 17 | 2016 | Maximum Difference Between Increase Elements | 🟢 Easy | [🔗 View](https://leetcode.com/problems/maximum-difference-between-increasing-elements/) |
 | Day 18 | 41 | First Missing Positive | 🔴 Hard  | [🔗 View](https://leetcode.com/problems/first-missing-positive/) |
 | Day 19 | 75 | Sort Colors | 🟡 Medium | [🔗 View](https://leetcode.com/problems/sort-colors/) |
+| Day 20 | 4 | Median of Two Sorted Arrays | 🔴 Hard  | [🔗 View](https://leetcode.com/problems/median-of-two-sorted-arrays/) |
 
 ---
 
